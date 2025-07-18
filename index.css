@@ -1,0 +1,74 @@
+body {
+   font-family: 'Open Sans', sans-serif;
+   margin: 0 auto;
+   width:1000px; 
+}
+
+header {
+    background-image: url(./Fast-Internet-Concept.gif);
+    background-repeat: no-repeat;
+    background-size:1000px;
+    height: 150px;
+    width: 100vw;
+    
+}
+
+.title {
+    position:absolute;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 80px;
+    margin-left: 30px;
+    margin-top: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgb(255, 255, 255);
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: rgb(4, 5, 13);
+    font-weight: bold;
+}
+
+a:hover {
+    color: black;
+}
+
+nav ul {
+    list-style-type:none;
+}
+
+nav li {
+    background-color: rgb(119, 157, 228);
+    width: 226px;
+    display: inline;
+    float:left;
+}
+
+nav a:link,
+nav a:visited {
+    background-color: rgb(119, 157, 228);
+    color: rgb(255, 255, 255);
+    display: block;
+    width: 240px;
+    text-align: center;
+    /* padding: 10px 0; */
+    /* margin: 1px; */
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+.login-photo {
+    float: right;
+    margin-left: 20px;
+
+}
+
+footer {
+    background-color: rgb(119, 157, 228);
+    margin: 200px auto;
+}
+
