@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Eatz Menu</title>
+    <link rel="Stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <h1 class="title"><em>What We Offer?</em></h1>
+        <div>
+          <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Feedback.hmtl">Feedback</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+<section class="menu">
+    <h2>Our Menu</h2>
+
+     <div class="menu-grid">
+    <div class="menu-item" data-name="Pizza Supreme" data-price="15.99">
+        <img src="./pizza.jpg" alt="Supreme Pizza" width="300" height="250">
+        <div class="item-info">
+        <h3>Pizza Supreme <span class="price">$15.99</span></h3>
+        <p>pizza with Sauce, cheese and a plethora of meats and veggies. YUM!</p>
+        <button class="add-to-cart">+</button>
+        </div>
+    </div>
+
+    <div class="menu-item" data-name="Bacon Cheeseburger" data-price="11.99">
+        <img src="./bacon-cheeseburger.jpg" alt="Bacon Cheeseburger" width="300" height="250">
+        <div class="item-info">
+        <h3>Bacon Cheeseburger <span class="price">$11.99</span></h3>
+        <p>Cheeseburger with 100% kobe Beef and fresh pan seared bacon.</p>
+        <button class="add-to-cart">+</button>
+       </div>
+    </div>
+
+    <div class="menu-item" data-name="Chicken Ceaser Salad" data-price="10.99">
+        <img src="./chicken-ceaser.jpg" alt="Ceaser Salad" width="300" height="250">
+        <div class="item-info">
+        <h3>Chicken Ceaser Salad <span class="price">$10.99</span></h3>
+        <p>A fresh washed salad with Pan Grilled Chicken, fresh Parmesean and House made Ceaser dressing.</p>
+        <button class="add-to-cart">+</button>
+       </div>
+       </div>
+    </div>
+    </section>
+
+    <section class="cart">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+</section>
+
+    
+<script src="./menu.js"></script>   
+</body>
+</html>

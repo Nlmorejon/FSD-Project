@@ -118,6 +118,83 @@ input[type="submit"]:hover {
     background-color: red;
 }
 
+.menu h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu {
+    max-width: 900px;
+    margin: 0 auto;
+    padding:20px;
+    font-family:sans-serif;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-item img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.item-info p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+.menu-item {
+    flex: 0 1 calc(50% - 10px);
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.menu-item h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin:0;
+}
+
+.menu-item p{
+    margin: 5px 0 0;
+    color: #bc0e0e;
+}
+
+.price {
+    color: black;
+    font-weight: bold;
+}
+
+.cart {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+.cart h2 {
+  margin-top: 0;
+}
+
 /* Footer */
 .footer-menu {
     background-color: var(--footer-bg);
