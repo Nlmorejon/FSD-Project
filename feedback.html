@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="feedback">
+    <header>
+        <h1 class="title"><em>Tell Us about Us!</em></h1>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="feedback-container">
+    <h1>How Can We be Speedier?!</h1>
+    <form action="#" method="POST" class="feedback-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="rating">Rating</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select a rating</option>
+        <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+        <option value="4">⭐⭐⭐⭐ - Good</option>
+        <option value="3">⭐⭐⭐ - Average</option>
+        <option value="2">⭐⭐ - Poor</option>
+        <option value="1">⭐ - Very Poor</option>
+      </select>
+
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" rows="5"></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+    <footer class="footer-menu">
+        <nav>
+            <ul>
+                <li><a href="#CONTACTUS">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p>All rights reserved. Affliate of the food-ordering@services.org</p>
+    </footer>
+    <script src="./feedback.js"></script>
+</body>
+</html>

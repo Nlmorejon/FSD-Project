@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speed Eatz Menu</title>
     <link rel="Stylesheet" href="./index.css">
 </head>
+
 <body>
+    <div class="page-wrapper">
     <header>
         <h1 class="title"><em>What We Offer?</em></h1>
         <div>
-          <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Menu.html">Menu</a></li>
-                <li><a href="Feedback.hmtl">Feedback</a></li>
-            </ul>
-          </nav>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-<section class="menu">
-    <h2>Our Menu</h2>
 
-     <div class="menu-grid">
-    <div class="menu-item" data-name="Pizza Supreme" data-price="15.99">
-        <img src="./pizza.jpg" alt="Supreme Pizza" width="300" height="250">
-        <div class="item-info">
-        <h3>Pizza Supreme <span class="price">$15.99</span></h3>
-        <p>pizza with Sauce, cheese and a plethora of meats and veggies. YUM!</p>
-        <button class="add-to-cart">+</button>
+<section class="menu-container">
+    <aside class="sidebar">
+        <label for="restaurantFilter"><strong>Filter by Restaurant:</strong></label>
+        <select id="restaurantFilter">
+            <option value="all">All</option>
+            <option value="Pizzcasso">Pizzcasso</option>
+            <option value="Burgered to Death">Burgered to Death</option>
+            <option value="Senior Salad">Senior Salad</option>
+        </select>
+    </aside>
+
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <input type="text" id="searchBar" placeholder="Search menu..." />
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Pizza Supreme" data-restaurant="Pizzcasso" data-price="15.99">
+                <img src="./Images/pizza.jpg" alt="Supreme Pizza" width="300" height="250">
+                <div class="item-info">
+                    <h3>Pizza Supreme <span class="price">$15.99</span></h3>
+                    <p>pizza with Sauce, cheese and a plethora of meats and veggies. YUM!</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="Bacon Cheeseburger" data-restaurant="Burgered to Death" data-price="11.99">
+                <img src="./Images/bacon-cheeseburger.jpg" alt="Bacon Cheeseburger" width="300" height="250">
+                <div class="item-info">
+                    <h3>Bacon Cheeseburger <span class="price">$11.99</span></h3>
+                    <p>Cheeseburger with 100% kobe Beef and fresh pan seared bacon.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="Chicken Ceaser Salad" data-restaurant="Senior Salad" data-price="10.99">
+                <img src="./Images/chicken-ceaser.jpg" alt="Ceaser Salad" width="300" height="250">
+                <div class="item-info">
+                    <h3>Chicken Ceaser Salad <span class="price">$10.99</span></h3>
+                    <p>A fresh washed salad with Pan Grilled Chicken, fresh Parmesean and House made Ceaser dressing.
+                    </p>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="menu-item" data-name="Bacon Cheeseburger" data-price="11.99">
-        <img src="./bacon-cheeseburger.jpg" alt="Bacon Cheeseburger" width="300" height="250">
-        <div class="item-info">
-        <h3>Bacon Cheeseburger <span class="price">$11.99</span></h3>
-        <p>Cheeseburger with 100% kobe Beef and fresh pan seared bacon.</p>
-        <button class="add-to-cart">+</button>
-       </div>
-    </div>
-
-    <div class="menu-item" data-name="Chicken Ceaser Salad" data-price="10.99">
-        <img src="./chicken-ceaser.jpg" alt="Ceaser Salad" width="300" height="250">
-        <div class="item-info">
-        <h3>Chicken Ceaser Salad <span class="price">$10.99</span></h3>
-        <p>A fresh washed salad with Pan Grilled Chicken, fresh Parmesean and House made Ceaser dressing.</p>
-        <button class="add-to-cart">+</button>
-       </div>
-       </div>
-    </div>
     </section>
 
     <section class="cart">
-  <h2>Your Cart</h2>
-  <ul id="cart-items"></ul>
-  <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
-</section>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+        <button id="submit-order">Submit Order</button>
+        <p id="order-confirmation" style="display:none; color: green; margin-top: 10px;">Thank you! Your order has been submitted.</p>
+    </section>
 
-    
-<script src="./menu.js"></script>   
+      <footer class="footer-menu">
+        <nav>
+            <ul>
+                <li><a href="#CONTACTUS">Contact Us</a></li>
+            </ul>
+
+        </nav>
+        <p>All rights reserved. Affliate of the food-ordering@services.org</p>
+    </footer>
+
+
+    <script src="./menu.js"></script>
+</div>
 </body>
+
 </html>
