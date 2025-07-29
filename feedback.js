@@ -1,5 +1,5 @@
 document.querySelector('.feedback-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form from submitting normally
+    e.preventDefault(); 
     alert('Thank you for your feedback!');
-    this.reset(); // Optional: clears the form fields
+    this.reset(); 
   });

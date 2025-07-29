@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order History - Speed Eatz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #bc0e0e;
+      --secondary-color: #fffaf5;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[var(--secondary-color)] text-[#333] font-['Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif'] flex flex-col">
+
+ 
+  <header class="bg-black text-left px-8 py-6 shadow-md text-white">
+    <h1 class="text-[4rem] sm:text-[5rem] font-black tracking-widest mb-2 text-[var(--primary-color)] font-impact">
+      Order History
+    </h1>
+    <nav class="w-full flex justify-center">
+      <ul class="flex gap-28 mt-2">
+        <li><a href="index.html" class="hover:text-[var(--primary-color)] text-lg">Home</a></li>
+        <li><a href="About.html" class="hover:text-[var(--primary-color)] text-lg">About</a></li>
+        <li><a href="feedback.html" class="hover:text-[var(--primary-color)] text-lg">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="flex-grow px-8 py-10">
+    <div class="max-w-6xl mx-auto bg-white p-6 rounded-xl shadow-md">
+      <h2 class="text-3xl font-semibold mb-6">Your Past Orders</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto border-collapse">
+          <thead>
+            <tr class="bg-gray-100 text-left text-lg">
+              <th class="p-4 border-b">#</th>
+              <th class="p-4 border-b">Items</th>
+              <th class="p-4 border-b">Total</th>
+              <th class="p-4 border-b">Date</th>
+            </tr>
+          </thead>
+          <tbody id="orderTable" class="text-base">
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-6">
+        <a href="menu.html" class="text-black hover:text-[var(--primary-color)] underline">&larr; Back to Menu</a>
+      </p>
+    </div>
+  </main>
+
+
+  <footer class="bg-black text-white text-center p-6 mt-auto">
+    <nav>
+      <ul class="flex justify-center gap-6 mb-2">
+        <li><a href="./feedback.html" class="hover:text-[var(--primary-color)]">Feedback</a></li>
+      </ul>
+    </nav>
+    <p class="text-sm text-gray-400">All rights reserved. Affiliate of the food-ordering@services.org</p>
+  </footer>
+  <script>
+  const orderTable = document.getElementById("orderTable");
+  const orderHistory = JSON.parse(localStorage.getItem("orderHistory")) || [];
+
+  if (orderHistory.length === 0) {
+    orderTable.innerHTML = '<tr><td colspan="4" class="p-4 text-gray-500 text-center">No previous orders found.</td></tr>';
+  } else {
+    orderHistory.forEach((order, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="p-4 border-b">${index + 1}</td>
+        <td class="p-4 border-b">${order.items.join(", ")}</td>
+        <td class="p-4 border-b">$${order.total.toFixed(2)}</td>
+        <td class="p-4 border-b">${order.date}</td>
+      `;
+      orderTable.appendChild(row);
+    });
+  }
+</script>
+  </body>
+ </html> 

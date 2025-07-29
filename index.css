@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
     margin-left: 30px;
     margin-right: 60px;
@@ -46,7 +46,6 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap; */
     gap: 1.5rem;
     padding: 0;
     margin: 0
@@ -68,7 +67,6 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Main Content */
 .content {
     display: flex;
     justify-content: center;
@@ -80,7 +78,6 @@ nav a:hover {
 .login-container {
   display: flex;
   justify-content:left;
-  /* align-items:; */
   padding: 4rem 2rem;
   gap: 2rem;
   flex-wrap: wrap;
@@ -117,9 +114,7 @@ nav a:hover {
 }
 
 form {
-    /* position:absolute; */
-    /* top:500px; */
-    /* right:1300px; */
+    
     background: gray;
     padding: 20px;
     border-radius: 20px;
@@ -170,8 +165,8 @@ input[type="submit"]:hover {
 .page-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    width:auto;
+    min-height: 100%;
+    width:100%;
 }
 
 #searchBar {
